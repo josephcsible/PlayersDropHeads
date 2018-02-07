@@ -10,7 +10,9 @@ import net.minecraftforge.common.config.Config;
 import net.minecraftforge.common.config.Config.Comment;
 import net.minecraftforge.common.config.Config.LangKey;
 import net.minecraftforge.common.config.Config.RangeDouble;
+import net.minecraftforge.common.config.ConfigManager;
 import net.minecraftforge.event.entity.player.PlayerDropsEvent;
+import net.minecraftforge.fml.client.event.ConfigChangedEvent.OnConfigChangedEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
@@ -37,6 +39,13 @@ public class PlayersDropHeads
         @LangKey("config.playersdropheads.chargedCreeperDropChance")
         @Comment("The chance that a player will drop their head when killed by a charged creeper.")
         public static double chargedCreeperDropChance = 1.0D;
+    }
+
+    @SubscribeEvent
+    public static void onConfigChanged(OnConfigChangedEvent event) {
+        if (event.getModID().equals(MODID)) {
+            ConfigManager.sync(MODID, Config.Type.INSTANCE);
+        }
     }
 
     private static void dropSkull(EntityPlayer player) {
