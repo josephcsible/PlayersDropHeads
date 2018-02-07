@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "playersdropheads",
+  "name": "PlayersDropHeads",
+  "description": "Makes players drop their heads when they die.",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
+  "url": "https://minecraft.curseforge.com/projects/playersdropheads",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["Joseph C. Sible"],
+  "credits": "",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
