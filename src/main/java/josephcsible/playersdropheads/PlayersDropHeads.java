@@ -35,7 +35,7 @@ import net.minecraftforge.fml.client.event.ConfigChangedEvent.OnConfigChangedEve
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-@Mod(modid = PlayersDropHeads.MODID, name = "PlayersDropHeads", version = "1.0.0", acceptedMinecraftVersions = "[1.12,1.13)")
+@Mod(modid = PlayersDropHeads.MODID, name = "PlayersDropHeads", version = "1.0.0", acceptedMinecraftVersions = "[1.12,1.13)", acceptableRemoteVersions = "*")
 @Mod.EventBusSubscriber
 public class PlayersDropHeads
 {
